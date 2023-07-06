@@ -32,7 +32,7 @@ public class Cat {
        return "Meow!";
     }
 
-    // Main method to create Dog objects
+    // Main method to create Cat objects
     public static void main(String[] args) {
         // Create two Dog objects
     	Cat cat1 = new Cat(4, "White");
