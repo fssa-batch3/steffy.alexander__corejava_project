@@ -6,6 +6,8 @@ public class ShapeCalculator {
 
 	public double calculateArea(double radius) {
 		return Math.PI * radius * radius;
+		//pi =22/7
+		//22/7 * 3.5*3.5
 	}
 
 	// Calculating Area for Rectangle
