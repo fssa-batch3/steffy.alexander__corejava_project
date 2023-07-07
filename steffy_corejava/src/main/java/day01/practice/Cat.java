@@ -40,8 +40,14 @@ public class Cat {
     // Main method to create Cat objects
     public static void main(String[] args) {
         // Create two Dog objects
-    	Cat cat1 = new Cat(4, "White","Meow!");
-    	Cat cat2 = new Cat(3, "Black","Meow!");
+    	Cat cat1 = new Cat();
+    	cat1.setAge(4);
+    	cat1.setColor("White");
+    	cat1.setSpeak("Meow!");
+    	Cat cat2 = new Cat();
+    	cat2.setAge(3);
+    	cat2.setColor("Black");
+    	cat2.setSpeak("Meow!");
 
         // Print the attributes of each Dog
         System.out.println("Cat 1:");
