@@ -4,12 +4,13 @@ public class Cat {
     // Attributes
     private int age;
     private String color;
+    private String speak;
 
-    // Constructor
-    public Cat(int b, String color) {
-        this.age = b;
-        this.color = color;
-    }
+//    // Constructor
+//    public Cat(int b, String color) {
+//        this.age = b;
+//        this.color = color;
+//    }
 
     // Getters and setters
     public int age() {
@@ -29,14 +30,18 @@ public class Cat {
     }
 
 		public String speak() {
-       return "Meow!";
+       return speak;
     }
+		 public void setSpeak(String speak) {
+		        this.speak = speak;
+		    }
+		
 
     // Main method to create Dog objects
     public static void main(String[] args) {
         // Create two Dog objects
-    	Cat cat1 = new Cat(4, "White");
-    	Cat cat2 = new Cat(3, "Black");
+    	Cat cat1 = new Cat(4, "White","Meow!");
+    	Cat cat2 = new Cat(3, "Black","Meow!");
 
         // Print the attributes of each Dog
         System.out.println("Cat 1:");
