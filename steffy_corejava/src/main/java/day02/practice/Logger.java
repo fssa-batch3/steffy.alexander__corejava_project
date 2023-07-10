@@ -1,7 +1,8 @@
 package day02.practice;
 
-
+//creating logger class
 public class Logger {
+	//
 	public static void debug (String msg) {
 		System.out.println("DEBUG: " + msg);
 	}
