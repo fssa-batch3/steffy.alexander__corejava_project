@@ -1,6 +1,6 @@
 package day04.practice;
 
-public class Polygon1 {
+public abstract class Polygon1 {
 protected int numberOfSides;
 	
 	public Polygon1 (int numberOfSides) throws Exception {
