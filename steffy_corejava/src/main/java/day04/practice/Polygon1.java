@@ -1,9 +1,9 @@
-package day04.solved;
+package day04.practice;
 
-public abstract class Polygon {
-	protected int numberOfSides;
+public class Polygon1 {
+protected int numberOfSides;
 	
-	public Polygon (int numberOfSides) throws Exception {
+	public Polygon1 (int numberOfSides) throws Exception {
 		if (numberOfSides < 3) {
 			throw new Exception("Invalid number of sides to create a polygon ");
 		}
@@ -14,4 +14,9 @@ public abstract class Polygon {
 	
 	
 	public abstract double calculateArea();
+	
+	
+	public abstract double circumference();
 }
+
+
