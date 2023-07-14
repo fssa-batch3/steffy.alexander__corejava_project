@@ -20,7 +20,7 @@ class Employee {
 		result = prime * result + id;
 		return result;
 	}
-
+ 
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -40,7 +40,7 @@ class Employee {
 public class HashCodeEqualsDemo {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
 
         Employee emp1 = new Employee(23);
         Employee emp2 = new Employee(23);
