@@ -4,53 +4,30 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-class Task {
-	private int id;
-	private String name;
-	private LocalDate deadline;
 
-	public Task(int id, String name, String date) {
-		this.id = id;
-		this.name = name;
-		LocalDate localDate = LocalDate.parse(date);
-		this.deadline = localDate;
-	}
 
-	public int printId() {
-		return id;
-	}
+public class TaskList {
+    public static void main(String[] args) {
+        ArrayList<Task> tasks = new ArrayList<Task>();// {task1,task2,...}
 
-	public String printName() {
-		return name;
-	}
+        Task task1=new Task(1, "Steffy", "2023-07-20");
+        Task task2=new Task(2, "King", "2023-07-20");
+        Task task3=new Task(3, "Barath", "2023-05-29");
+        Task task4=new Task(3, "madhu", "2023-11-09");
+        
+        
+        tasks.add(task1);
+        tasks.add(task2);
+        tasks.add(task3);
+        tasks.add(task4); 
 
-	public LocalDate printDeadline() {
-		return deadline;
-	}
+        HashSet<Task> tasksSet = new HashSet<Task>(tasks);// tasks as a arraylist is converted into hashset
 
-}
-public class TaskList{
-	public static void main(String[] args) {
-		ArrayList<Task> tasks = new ArrayList<Task>();
-
-		tasks.add(new Task(1, "Steffy", "2023-07-20"));
-		tasks.add(new Task(2, "Barath", "2023-05-29"));
-		tasks.add(new Task(3, "Barath", "2023-05-29"));
-		tasks.add(new Task(3, "madhu", "2023-11-09"));
-		
-		HashSet<Task> tasks1 = new HashSet<Task>(tasks);
-	
-		
-		for(Task t:tasks1) {
-			
-			System.out.println("Using Hashset :" + t.printId());
-			System.out.println("Using Hashset :" + t.printName());	
-			System.out.println("Using Hashset :" + t.printDeadline());	
-		}
-		
-		
-	
-
-	}
+        for (Task task : tasksSet) {// 
+            System.out.println("Using HashSet: " + task.getId());
+            System.out.println("Using HashSet: " + task.getName());
+            System.out.println("Using HashSet: " + task.getDeadline());
+        }
+    }
 }
 
