@@ -2,6 +2,7 @@ package day07.practice;
 
 import java.time.LocalDate;
 
+
 public class Task {
 
 		    private int id;
@@ -11,7 +12,8 @@ public class Task {
 		    public Task(int id, String name, String date) {
 		        this.id = id;
 		        this.name = name;
-		        LocalDate localDate = LocalDate.parse(date);// parse is used for converting string to localdate -- format("2023-07-20")
+		        LocalDate localDate = LocalDate.parse(date);
+		        // parse is used for converting string to localdate -- format("2023-07-20")
 		        this.deadline = localDate;
 		    }
 

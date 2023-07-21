@@ -7,7 +7,7 @@ import java.util.Collections;
 
 class Account implements Comparable<Account> {
 
-	private String accNo;
+	private String accNo; 
 	private String name;
 	private double balance; 
 
@@ -43,15 +43,15 @@ class Account implements Comparable<Account> {
 	}
 
 	@Override
-	public int compareTo(Account o) {
+	public int compareTo(Account o) { // rule... return 0 , -1, 1;
 
 		if (balance == o.getBalance()) {
-			return 0;
-		} else {
+			return 0;  
+		} else { 
 			if (this.balance < o.getBalance()) {
 				return 1;
 			} else {
-				return -1;
+				return -1;   
 			}
 			// return ( this.balance > o.getBalance()) ? 1: -1;
 		}
@@ -73,7 +73,7 @@ public class ComparableInterfaceDemo {
 
 		List<Account> list = new ArrayList<Account>();
 		list.add(acct1);
-		list.add(acct2);
+		list.add(acct2); 
 		list.add(acct3);
 
 		System.out.println(list);
