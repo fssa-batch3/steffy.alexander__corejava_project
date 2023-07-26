@@ -12,9 +12,11 @@ public class RemoveDuplicates {
 		cityList.add("Mumbai");
 
 		// creating a new arraylist as newList
+		
 		List<String> newList = new ArrayList<String>();
 
-		// returning a foreach method & assining the cityList to city
+		// returning a foreach method & assining the cityList to cit
+
 		for (String city : cityList) {
 			if (!newList.contains(city)) {
 				// if city not contains any duplicates

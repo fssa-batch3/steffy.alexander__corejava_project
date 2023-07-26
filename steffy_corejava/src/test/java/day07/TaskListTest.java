@@ -1,4 +1,5 @@
-package steffy_corejava;
+package day07;
+
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -8,11 +9,11 @@ import org.junit.Test;
 
 import day07.practice.*;
 
-public class day07TaskListTest {
+public class TaskListTest {
 	
 	@Test
 	public void testTaskList() {
-		ArrayList<Task> tasks = new ArrayList<>();
+		ArrayList<Task> tasks = new ArrayList<>(); 
 		Task task1 = new Task(1, "Steffy", "2023-07-20");
 		Task task2 = new Task(2, "Barath", "2023-05-29");
 		Task task3 = new Task(3, "Barath", "2023-05-29");

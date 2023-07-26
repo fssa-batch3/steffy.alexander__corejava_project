@@ -3,12 +3,12 @@ package day09.practice;
 import java.time.LocalDate;
 import java.util.*;
 
-		class Tasks implements Comparable<Tasks> {
+		public class TaskSorting2 implements Comparable<TaskSorting2> {
 			private int priority;
 			private String name;
 			private LocalDate deadline;
 			
-			public Tasks(int priority,String name,LocalDate deadline) {
+			public TaskSorting2(int priority,String name,LocalDate deadline) {
 				
 				this.priority = priority;
 				this.name = name;
@@ -35,7 +35,7 @@ import java.util.*;
 			
 			
 			@Override
-			public int compareTo(Tasks task) {
+			public int compareTo(TaskSorting2 task) {
 				if (deadline.equals(task.getDeadline())) {
 					if(priority == task.priority) {
 						return 0;
@@ -66,18 +66,18 @@ import java.util.*;
 			
 		
 		}
-public class TaskSorting2 {
+ class TaskSorting {
 	public static void main(String[] args) {
 		
 		LocalDate d1 = LocalDate.of(2022, 1, 8);
 		LocalDate d2 = LocalDate.of(2022, 1, 8);
 		LocalDate d3 = LocalDate.of(2022, 1, 8);
 		
-		Tasks task1 = new Tasks(10, "steffy",d1);
-		Tasks task2 = new Tasks(10, "sri",d2);
-		Tasks task3 = new Tasks(2, "sai",d3);
+		TaskSorting2 task1 = new TaskSorting2(10, "steffy",d1);
+		TaskSorting2 task2 = new TaskSorting2(10, "sri",d2);
+		TaskSorting2 task3 = new TaskSorting2(2, "sai",d3);
 		
-		List<Tasks> tasklist= new ArrayList<Tasks>();
+		List<TaskSorting2> tasklist= new ArrayList<TaskSorting2>();
 		tasklist.add(task1);
 		tasklist.add(task2);
 		tasklist.add(task3);

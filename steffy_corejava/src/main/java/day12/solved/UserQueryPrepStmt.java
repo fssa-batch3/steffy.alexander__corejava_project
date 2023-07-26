@@ -3,7 +3,7 @@ package day12.solved;
 import day11.solved.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+
 
 
 //Explain in class what is the difference between Statement and PreparedStatement 
