@@ -11,7 +11,7 @@ public class TaskDAO {
 		Connection con = null;
 		String url = "jdbc:mysql://localhost:3306/task"; // url for to connect local database
 		String userName = "root";
-		String passWord = "password";
+		String passWord = "123456";
 		try {
 //	            Class.forName("com.mysql.cj.jdbc.Driver");
 			con = DriverManager.getConnection(url, userName, passWord);

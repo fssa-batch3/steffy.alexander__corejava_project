@@ -1,7 +1,7 @@
 package day12.practice;
 
 public class Tasks {
-	int id;
-	String name;
-	String status;
+	 int id;
+	 public String name;
+	 public String status;
 }

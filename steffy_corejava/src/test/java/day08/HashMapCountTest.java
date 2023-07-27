@@ -1,4 +1,4 @@
-package day08.practice;
+package day08;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -6,6 +6,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.util.Map;
 
 import org.junit.Test;
+
+import day08.practice.HashMapCount;
 
 public class HashMapCountTest {
 

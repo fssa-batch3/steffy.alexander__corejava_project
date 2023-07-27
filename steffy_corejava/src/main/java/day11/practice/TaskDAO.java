@@ -1,38 +1,53 @@
 package day11.practice;
-import java.sql.*;
-public class TaskDAO {
-	public static void main(String[] args) throws DAOException {
-		Tasks task = new Tasks("practice","completed");
-		createTask(task);
+
+	import java.sql.*;
+
+
+	public class TaskDAO {
+		
+
+		public static boolean createTask(Tasks task) throws DAOException, SQLException {// User defined Exception
+			// Write code here to get connection
+			if(task == null) {
+				throw new DAOException("cannot run prepared statement");
+			}
+			String url = "jdbc:mysql://aws.connect.psdb.cloud:3306/core"; // url for to connect local database
+
+			String user = "8zqnq0yixqcsbrstp3k8"; // user of local database
+
+			String password = "pscale_pw_oIXHeigKNcbgtMXmpu99k0CbCaUDgwwrzIwRNAbkVx4"; // password of loqcal database
+			
+			Connection connection=null;
+//			try {
+				try {
+					connection = DriverManager.getConnection(url, user, password);
+				} 
+			catch (SQLException e) {
+				throw new DAOException("cannot create connection");
+			}
+			// Create insert statement
+			String query = "insert into task(name, status) values (?,?)";
+
+			// Execute insert statement
+			try {
+				PreparedStatement pst = connection.prepareStatement(query);
+				pst.setString(1, task.getName());
+				pst.setString(2, task.getStatus());
+				pst.executeUpdate();
+			} 
+			catch (SQLException e) {
+				
+				throw new DAOException("cannot run prepared statement");
+			}
+			// close connection
+			try {
+				connection.close();
+			} 
+			catch (SQLException e) {
+				throw new DAOException("cannot close connection");
+			}
+			System.out.println("Task completed");
+			return true;
+		}
+
 	}
-    public static boolean createTask(Tasks task) throws DAOException {
-        if (task == null) {
-            throw new DAOException("Cannot run prepared statement. Task is null.");
-        }
-        String url = "jdbc:mysql://localhost:3306/task";
-        String user = "root";
-        String password = "123456";
-        Connection connection = null;
-        try {
-            connection = DriverManager.getConnection(url, user, password);
-            String query = "INSERT INTO task(name, status) VALUES (?, ?)";
-            try (PreparedStatement pst = connection.prepareStatement(query)) {
-                pst.setString(1, task.getName());
-                pst.setString(2, task.getStatus());
-                pst.executeUpdate();
-            }
-            System.out.println("Task completed");
-            return true;
-        } catch (SQLException e) {
-            throw new DAOException("Error while creating task", e);
-        } finally {
-            if (connection != null) {
-                try {
-                    connection.close();
-                } catch (SQLException e) {
-                    throw new DAOException("Error while closing connection", e);
-                }
-            }
-        }
-    }
-}
