@@ -1,8 +1,6 @@
 package com.fssa.veeblooms.Enum;
 
-public class HybridEnum {
-public enum hybrid{
-	YES,
-	NO
-}
+public enum HybridEnum {
+    YES,
+    NO
 }
