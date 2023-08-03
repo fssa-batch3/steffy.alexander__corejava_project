@@ -460,7 +460,7 @@ public class TestPlantValidator {
 	}
 
 	
-	//testcases for hybrid enum class
+	//test cases for hybrid enum class
 	
 	
 	@Test

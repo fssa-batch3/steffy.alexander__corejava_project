@@ -11,7 +11,7 @@ import com.fssa.veeblooms.Enum.HybridEnum;
 
 public class PlantValidator {
 
-    public boolean validate(Plant plant) throws CustomException {
+    public static boolean validatePlant(Plant plant) throws CustomException {
         if (plant == null) {
             throw new CustomException(ErrorMessages.INVALID_PLANT_NULL);
         }
@@ -23,10 +23,10 @@ public class PlantValidator {
         validatePlantHeight(plant.getPlantHeight());
         validatePlantingSeason(plant.getPlantingSeason());
         validateHybrid(plant.getHybrid());
-        return true;
-    }
+        return true; 
+    } 
 
-    public boolean validatePlantName(String plantName) throws CustomException {
+    public static boolean validatePlantName(String plantName) throws CustomException {
         if (plantName == null || plantName.trim().isEmpty()) {
             throw new CustomException(ErrorMessages.INVALID_PLANT_NAME);
         }
@@ -44,7 +44,7 @@ public class PlantValidator {
         return true;
     }
 
-    public boolean validatePlantImagesUrl(List<String> plantImagesUrl) throws CustomException {
+    public static boolean validatePlantImagesUrl(List<String> plantImagesUrl) throws CustomException {
         if (plantImagesUrl == null || plantImagesUrl.isEmpty()) {
             throw new CustomException(ErrorMessages.INVALID_PLANT_PLANTIMAGESURL);
         }
@@ -58,21 +58,21 @@ public class PlantValidator {
         return true;
     }
 
-    public boolean validatePrice(double price) throws CustomException {
+    public static boolean validatePrice(double price) throws CustomException {
         if (price <= 0) {
             throw new CustomException(ErrorMessages.INVALID_PLANT_PRICE);
         }
         return true;
     }
 
-    public boolean validateRating(int rating) throws CustomException {
+    public static boolean validateRating(int rating) throws CustomException {
         if (rating < 0) {
             throw new CustomException(ErrorMessages.INVALID_PLANT_RATING);
         }
         return true;
     }
 
-    public boolean validatePlantType(String plantType) throws CustomException {
+    public static boolean validatePlantType(String plantType) throws CustomException {
         if (plantType == null || plantType.trim().isEmpty()) {
             throw new CustomException(ErrorMessages.INVALID_PLANT_TYPE);
         }
@@ -90,14 +90,14 @@ public class PlantValidator {
         return true;
     }
 
-    public boolean validatePlantHeight(float plantHeight) throws CustomException {
+    public static boolean validatePlantHeight(float plantHeight) throws CustomException {
         if (plantHeight <= 0) {
             throw new CustomException(ErrorMessages.INVALID_PLANT_HEIGHT);
         }
         return true;
     }
 
-    public boolean validatePlantingSeason(String plantingSeason) throws CustomException {
+    public static boolean validatePlantingSeason(String plantingSeason) throws CustomException {
         if (plantingSeason == null || plantingSeason.trim().isEmpty()) {
             throw new CustomException(ErrorMessages.INVALID_PLANTING_SEASON);
         }
@@ -115,7 +115,7 @@ public class PlantValidator {
         return true;
     }
 
-    public boolean validateHybrid(HybridEnum hybrid) throws CustomException {
+    public static boolean validateHybrid(HybridEnum hybrid) throws CustomException {
         if (hybrid == null) {
             throw new CustomException(ErrorMessages.INVALID_HYBRID);
         }
